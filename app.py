@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///refugios.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///animales.db'
 db = SQLAlchemy(app)
 
 # Definición de los modelos de la base de datos
@@ -28,8 +28,8 @@ class Animal(db.Model):
     descripcion = db.Column(db.String(240))
     refugio_id = db.Column(db.Integer, db.ForeignKey('refugio.id'))
 
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
 
 # Rutas de la aplicación web
 # Define la ruta principal de la aplicación (/). 
@@ -38,7 +38,12 @@ class Animal(db.Model):
 @app.route('/')
 def inicio():
     refugios = Refugio.query.all()
-    return render_template('inicio.html', refugios=refugios)
+    return render_template('index.html', refugios=refugios)
+
+@app.route('/admin')
+def administrador():
+    refugios = Refugio.query.all()
+    return render_template('admin.html', refugios=refugios)
 # Define la ruta /refugios/nuevo que maneja las solicitudes GET y POST.
 # Si la solicitud es POST, se obtienen los datos del formulario enviado por el usuario 
 # y se crea un nuevo objeto Refugio en la base de datos. Luego, se redirige al usuario a la ruta principal (/).
@@ -84,28 +89,35 @@ def animales():
         db.session.commit()
         return redirect('/animales')
     animales = Animal.query.all()
-    return render_template('datos_animal.html', animales=animales)
+    return render_template('formulario-registro-animal.html', animales=animales)
 
 @app.route('/animales')
 def lista_animales():
     animales = Animal.query.all()
-    return render_template('lista_animales.html', animales=animales)
+    print(animales)
+    return render_template('tarjetas.html', animales=animales)
 
 
 @app.route('/infoAnimales')
 def datos_animales():
     animales = Animal.query.all()
-    return render_template('infoAnimales.html', animales=animales)
+    print(animales)
+    return render_template('perfil.html', animales=animales)
 
 
 #Define la ruta /animales/<int:animal_id>/apadrinar que maneja las solicitudes POST. 
 # Esta ruta es utilizada para realizar alguna acción relacionada con apadrinar un animal. 
 # En este caso, simplemente se redirige al usuario a la ruta principal (/).
 
-@app.route('/animales/<int:animal_id>/apadrinar', methods=['POST', 'GET'])
-def apadrinar(animal_id):
-    animal = Animal.query.filter_by(id=animal_id).first()
-    return render_template('form_apadri.html', animal=animal)
+# @app.route('/animales/<int:animal_id>/apadrinar', methods=['POST', 'GET'])
+# def apadrinar(animal_id):
+#     animal = Animal.query.filter_by(id=animal_id).first()
+#     return render_template('formulario-apadrinamiento.html', animal=animal)
+
+@app.route('/animales/apadrinar', methods=['POST', 'GET'])
+def apadrinar():
+    #animal = Animal.query.filter_by().first()
+    return render_template('formulario-apadrinamiento.html')
 
 # Punto de entrada de la aplicación
 # Si el módulo actual es el punto de entrada de la aplicación, se crea la estructura de la 

@@ -8,44 +8,45 @@
 </head>
 <body class="bg-[#E8EDE7]">
          <!-- Barra Navegacion -->
-         <nav class="bg-gradient-to-r from-[#036280] to-[#012e4a]">
+    <nav class="bg-gradient-to-r from-[#036280]  to-[#012e4a]">
 
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <!-- Agrupa el logo y los botones en un solo div -->
             <div class="flex h-16 items-center justify-between">
-                
+
                 <!-- logotipo -->
-                <a href="admin.html" class="text-white flex items-center gap-2"><img src="../static/img/logo.png" alt="" class="h-12">Huellas Solidarias</a>
-                
+                <a href="/admin" class="text-white flex items-center gap-2"><img src="../../static/img/logo.png"
+                        alt="" class="h-12">Huellas Solidarias</a>
+
                 <!-- Separa el logo de los botones -->
                 <div>
-                    
+
                     <!-- Botones de la barra de Navegacion -->
-                    <div class="flex space-x-4">
-                    <a
-                        href="index.html"
-                        class="text-white rounded-md hover:bg-gray-700 px-3 py-2 text-sm font-medium"
-                        aria-current="page"
-                        >Principal</a
-                    >
-                    <a
-                        href="tarjetas.html"
-                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                        >Se un padrino</a
-                    >
-                
+                    <div class="flex space-x-4 items-center">
+                        <a href="/admin" class="text-white rounded-md px-3 py-2 text-sm font-medium"
+                            aria-current="page">Principal</a>
+                        <a href="{{ url_for('animales') }}"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Registra
+                            un Peludo</a>
+
+                        <a href="/"
+                            class="text-gray-300 bg-red-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Cerrar
+                            Sesión</a>
+
+                        <img src="../../static/img/perro1.jpg" alt="" class="h-12 w-12 rounded-full">
                     </div>
-        
+
                 </div>
-        
+
             </div>
-        
-            </div>
-        
-        </nav>
+
+        </div>
+
+    </nav>
+    
     <h1 class="my-5 text-center text-3xl">Registro de peludos</h1>
     <main class="w-[1200px] mx-auto">
-        <form class="flex flex-col items-center justify around" >
+        <form class="flex flex-col items-center justify around" action="{{ url_for('animales') }}" method="post" >
             <fieldset class="flex flex-col border-2 border-[#012E4A] w-2/3 p-[20px] mb-4">
                 <legend class="px-4 uppercase">CREACION DEL PERFIL</legend>
                 
