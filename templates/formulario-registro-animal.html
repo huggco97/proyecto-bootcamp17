@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de registro de peludos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#E8EDE7]">
+         <!-- Barra Navegacion -->
+         <nav class="bg-gradient-to-r from-[#036280] to-[#012e4a]">
+
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <!-- Agrupa el logo y los botones en un solo div -->
+            <div class="flex h-16 items-center justify-between">
+                
+                <!-- logotipo -->
+                <a href="admin.html" class="text-white flex items-center gap-2"><img src="../static/img/logo.png" alt="" class="h-12">Huellas Solidarias</a>
+                
+                <!-- Separa el logo de los botones -->
+                <div>
+                    
+                    <!-- Botones de la barra de Navegacion -->
+                    <div class="flex space-x-4">
+                    <a
+                        href="index.html"
+                        class="text-white rounded-md hover:bg-gray-700 px-3 py-2 text-sm font-medium"
+                        aria-current="page"
+                        >Principal</a
+                    >
+                    <a
+                        href="tarjetas.html"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                        >Se un padrino</a
+                    >
+                
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+            </div>
+        
+        </nav>
+    <h1 class="my-5 text-center text-3xl">Registro de peludos</h1>
+    <main class="w-[1200px] mx-auto">
+        <form class="flex flex-col items-center justify around" >
+            <fieldset class="flex flex-col border-2 border-[#012E4A] w-2/3 p-[20px] mb-4">
+                <legend class="px-4 uppercase">CREACION DEL PERFIL</legend>
+                
+                <label class="mb-2" for="nombre">Nombre del peludo:</label>
+                <input class="bg-transparent border-2 border-[#012E4A] w-[100%] p-[10px] rounded-lg mb-4" type="text" name="nombre" id="nombre" placeholder="Ingrese el nombre del peludo">
+                
+                <label class="mb-2" for="nombre-refugio">Nombre del refugio:</label>
+                <input class="bg-transparent border-2 border-[#012E4A] w-[100%] p-[10px] rounded-lg mb-4" type="text" name="nombre-refugio" id="nombre-refugio" placeholder="Ingrese el nombre del refugio del peludo">
+                
+                <label class="mb-2" for="especie">Especie: </label>
+                <select class="border-2 border-[#012E4A] w-[100%] p-[10px] rounded-lg mb-4 bg-transparent" name="especie" id="especie">
+                    <option>-- Seleccione la especie del peludo --</option>
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                </select>
+                
+                <label class="mb-2" for="sexo">Sexo: </label>
+                <select class="border-2 border-[#012E4A] w-[100%] p-[10px] rounded-lg mb-4 bg-transparent" name="sexo" id="sexo">
+                    <option>-- Seleccione el sexo del peludo --</option>
+                    <option value="macho">Macho</option>
+                    <option value="hembra">Hembra</option>
+                </select>
+    
+                <label class="mb-2" for="raza">Raza:</label>
+                <input class="bg-transparent border-2 border-[#012E4A] w-[100%] p-[10px] rounded-lg mb-4" type="text" name="raza" id="raza" placeholder="Escriba la raza del su peludo">
+                
+                <label class="mb-2" for="edad">Edad:</label>
+                <input class="bg-transparent border-2 border-[#012E4A] w-[100%] p-[10px] rounded-lg mb-4" type="number" name="edad" id="edad" placeholder="Escriba la edad del peludo">
+    
+                <label for="descripcion">Breve descripción del peludo:</label>
+                <textarea class="border-2 p-[10px] border-2 border-[#012E4A] rounded-lg bg-transparent" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese una descripción del peludo, ejemplo: lo que le gusta, como se comporta, etc."></textarea>
+                
+                <input class="px-[30px] py-[10px] text-sm font-medium text-center text-white bg-[#036280] rounded-lg hover:bg-[#378BA4] cursor-pointer mt-6" type="submit" value="Cargar">
+            </fieldset>
+    
+        </form>
+    </main>
+    
+</body>
+</html>
+</body>
+</html>

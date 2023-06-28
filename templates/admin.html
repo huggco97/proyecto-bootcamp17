@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Huellas solidarias - Admin</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.cdnfonts.com/css/yeon-sung" rel="stylesheet">
+</head>
+<body class="bg-[#E8EDE7]">
+<!-- Barra Navegacion -->
+<nav class="bg-gradient-to-r from-[#036280]  to-[#012e4a]">
+    
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <!-- Agrupa el logo y los botones en un solo div -->
+    <div class="flex h-16 items-center justify-between">
+        
+        <!-- logotipo -->
+        <a href="index.html" class="text-white flex items-center gap-2"><img src="../../static/img/logo.png" alt="" class="h-12">Huellas Solidarias</a>
+        
+        <!-- Separa el logo de los botones -->
+        <div>
+            
+            <!-- Botones de la barra de Navegacion -->
+            <div class="flex space-x-4 items-center">
+            <a
+                href="index.html"
+                class="text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page"
+                >Principal</a
+            >
+            <a
+                href="formulario-registro-animal.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >Registra un Peludo</a
+            >
+            
+            <a
+                href="index.html"
+                class="text-gray-300 bg-red-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >Cerrar Sesión</a
+            >
+
+            <img src="../../static/img/perro1.jpg" alt="" class="h-12 w-12 rounded-full">        
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<!-- Seccion quienes somos -->
+<section class=" h-[60vh] w-full bg-[url('../../static/img/perro1.jpg')] bg-cover bg-[center_center]">
+    <div class="h-[60vh] bg-gradient-to-r from-[#000000bf] to-[#a59b9b61]"> <!--  via-[#c0bebe61] -->
+        <div class="w-[1200px] flex justify-around mx-auto h-[60vh] items-center">
+            <div class="text-6xl text-white">
+                <h2>¿Quiénes</h2>        
+                <h2 class="ml-[10rem]">somos?</h2>        
+            </div>
+            <p class="w-7/12 text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus similique, facere blanditiis provident quasi ut. Voluptatibus libero nemo, reiciendis magnam minus enim laudantium facilis. Ipsa quam tempora fugit consequatur quod.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contenedor principal -->
+<main class="w-[1200px] mx-auto">   
+    <!-- Contadores -->
+    <div class=" p-[150px] border-b-2 border-[#012E4A] h-[20vh] flex flex-col justify-evenly items-center text-center  text-gray-800">
+        <!-- Primer contador -->
+        <div class="w-[95%] mb-[50px]">
+            <span class="text-4xl font-bold text-blue-900" 
+            x-data="animation()"
+            x-init="animate(400)"
+            x-text="counter">
+            120
+            </span>
+            <p>Peludos apadrinados</p>
+        </div>
+
+        <!-- Contenedor de contadores -->
+        <div class="flex w-[100%] justify-between">
+            <!-- Segundo contador -->
+            <div class="w-48">
+                <span class="text-4xl font-bold text-blue-900" 
+                x-data="animation()"
+                x-init="animate(9400)"
+                x-text="counter">
+                300
+                </span>
+                <p>Esperando Padrinos</p>
+            </div>
+            <!-- Tercer contador -->
+            <div class="w-48">
+                <span class="text-4xl font-bold text-blue-900" 
+                x-data="animation()"
+                x-init="animate(11024)"
+                x-text="counter">
+                021
+                </span>
+                <p>Refugios Aliados</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seccion Tarjetas  -->
+    <section class="flex flex-col mt-4 items-center">
+        <div class="text-5xl my-5">
+            <h2>Nuestras Estrellas</h2>
+        </div>
+        <!-- Tarjetas -->
+        <div class="flex flex-row justify-center space-x-10 my-5">
+            <!-- Tarjeta 1 -->
+            <div class="max-w-sm border rounded-lg bg-[#012E4A] border-gray-800 shadow-[16px_17px_39px_-9px_rgba(0,0,0,0.75)]">
+            <div class="h-[307px]">
+                <img class="h-[307px] rounded-t-lg" src="../../static/img/perro4.jpg" alt="" />
+            </div>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Otis</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Descripcion completamente aleatoria del perro en cuestion. Si quieres saber mas haz click en el boton</p>
+                <a href="perfil.html" class="inline-flex items-center px-[30px] py-[10px] text-sm font-medium text-center text-white bg-[#036280] rounded-lg hover:bg-[#378BA4] focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    Saber más
+                </a>
+            </div>
+            </div>
+             <!-- Tarjeta 2 -->
+             <div class="max-w-sm border rounded-lg shadow bg-[#012E4A] border-gray-800 shadow-[16px_17px_39px_-9px_rgba(0,0,0,0.75)]">
+                <div class="h-[307px] bg-[url('../static/img/gatito1.jpeg')] bg-cover bg-center">
+                    <img class="h-[307px]  ounded-t-lg" src='' alt="" />
+                </div>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Otis</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Descripcion completamente aleatoria del perro en cuestion. Si quieres saber mas haz click en el boton</p>
+                    <a href="perfil.html" class="inline-flex items-center px-[30px] py-[10px] text-sm font-medium text-center text-white bg-[#036280] rounded-lg hover:bg-[#378BA4] focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        Saber más
+                    </a>
+                </div>
+                </div>
+            <!-- Tarjeta 3 -->
+            <div class="max-w-sm border rounded-lg shadow bg-[#012E4A] border-gray-800 shadow-[16px_17px_39px_-9px_rgba(0,0,0,0.75)]">
+                <div class="h-[307px]">
+                    <img class="h-[307px] rounded-t-lg" src="../../static/img/gato1.jpg" alt="" />
+                </div>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">Otis</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Descripcion completamente aleatoria del perro en cuestion. Si quieres saber mas haz click en el boton</p>
+                <a href="perfil.html" class="inline-flex items-center px-[30px] py-[10px] text-sm font-medium text-center text-white bg-[#036280] rounded-lg hover:bg-[#378BA4] focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    Saber más
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion ver más -->
+    <section class="mb-4 flex justify-end ">
+            <a href="tarjetas.html" class="px-[30px] py-[10px] bg-[#036280] rounded-lg hover:bg-[#378BA4] text-white font-medium">Ver más</a>
+    </section>
+</main>
+
+<!-- Pie de página -->
+<footer class="bg-gradient-to-r from-[#036280] to-[#012e4a]">
+    
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <!-- Agrupa el logo y los botones en un solo div -->
+    <div class="flex h-16 items-center justify-between">
+        
+        <!-- logotipo -->
+        <a href="index.html" class="text-white flex items-center gap-2"><img src="../../static/img/logo.png" alt="" class="h-12">Huellas Solidarias</a>
+        
+        <!-- Separa el logo de los botones -->
+        <div>
+            
+            <!-- Botones de la barra de Navegacion -->
+            <div class="flex space-x-4">
+            <a
+                href="#"
+                class="bg-gray-600 text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page"
+                >Principal</a
+            >
+            <a
+                href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >Registra un peludo</a
+            >
+        
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</footer>
+</body>
+</html>
